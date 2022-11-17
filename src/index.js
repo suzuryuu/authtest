@@ -4,6 +4,15 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+// for amlify+cognito auth conf
+import { translations } from '@aws-amplify/ui-react'
+import { Amplify, Auth, I18n } from 'aws-amplify';
+import awsconfig from './aws-exports';
+Amplify.configure(awsconfig);
+
+I18n.putVocabularies(translations);
+I18n.setLanguage('ja');
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
